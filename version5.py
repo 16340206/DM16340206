@@ -127,7 +127,7 @@ def mergeBasicTables(baseTable):
 
     resTable = resTable.merge(user_behavior_info, how='left', on='uid', suffixes=('_base1', '_ubef'))
     # cat_columns = ['city', 'prodName', 'color', 'carrier', 'os', 'ct']
-
+    '''
     cat_columns = ['carrier', 'ct']
     for c in cat_columns:
         resTable[c] = resTable[c].apply(lambda x: x if type(x) == str else str(x))
@@ -135,7 +135,7 @@ def mergeBasicTables(baseTable):
         class2id[c+'2id'] = dict(zip(sort_temp, range(1, len(sort_temp)+1)))
         id2class['id2'+c] = dict(zip(range(1, len(sort_temp)+1), sort_temp))
         resTable[c] = resTable[c].apply(lambda x: class2id[c+'2id'][x])
-
+    '''
     return resTable
 
 
