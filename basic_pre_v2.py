@@ -84,9 +84,10 @@ def group(strs, thre):
     print(strs + ' finished')
 
 
-group('city', 4000)
-
+group('carrier', 0)
+group('city', 0)
+group('ct', 0)
 names = ['prodName', 'ramLeftRation', 'romLeftRation', 'color', 'fontSize', 'os']
 for row in names:
-    group(row, 15000)
+    group(row, 500)
 
